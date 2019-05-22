@@ -1,0 +1,26 @@
+.popup
+  background: rgba(0, 0, 0, .7)
+  display: none
+  justify-content: center
+  align-items: center
+  position: fixed
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0 
+  width: 100%
+  height: 100%
+  z-index: 9
+  color: #000
+  &.active
+    display: flex
+  .popup__wrapper
+    display: flex
+    position: relative
+    background: $lightBg
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    max-width: 300px
+    border-radius: 5px 0 5px 5px
+    padding: 60px 180px

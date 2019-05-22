@@ -1,0 +1,26 @@
+// Light Theme Default Button
+.default-button
+  margin-top: 20px
+  cursor: pointer
+  border: none
+  border-radius: 5px
+  padding: 10px 20px
+  background: $defaultLightButton
+  color: #fff
+  transition: .3s ease
+  &:hover
+    background: lighten($defaultLightButton, 5%)
+
+
+// Dark Theme Default Button
+body.darkTheme
+  .btn
+    background: $darkBtnBg
+    color: #fff
+    &:hover
+    background: lighten($darkBtnBg, 10%)
+  .popup__wrapper
+    .default-button
+      background: $darkBtnBg
+      &:hover
+        background: lighten($darkBtnBg, 10%)

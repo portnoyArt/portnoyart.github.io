@@ -1,0 +1,185 @@
+@import 'vars'
+@import 'popup'
+@import 'darkTheme'
+@import 'buttons'
+  
+  
+body
+  font-family: 'Roboto', sans-serif;
+  background: $lightBg
+
+.radio-wrapper
+  justify-content: flex-end
+  display: flex
+  margin: 10px 20px 0
+  label
+    cursor: pointer
+    position: relative
+    padding-left: 20px
+    margin-right: 15px
+    &:before
+      content: ""
+      display: inline-block
+      position: absolute
+      left: 0
+      bottom: 1px
+      background: #aaa
+      box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8)
+      width: 18px
+      height: 18px
+      margin-right: 15px
+      border-radius: 50%
+  input
+    &[type="radio"]
+      display: none
+      &:checked + label:before
+        content: '\2022'
+        color: $labelColor
+        font-size: 25px
+        font-family: sans-serif
+        display: flex
+        justify-content: center
+        align-items: center
+
+
+.wrapper
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  .item
+    overflow: hidden
+    transition: .4s ease
+    border-radius: 10px
+    flex-grow: 1
+    background: #fff
+    margin: 20px
+    display: flex
+    justify-content: center
+    align-items: center
+    color: $lightItemColor
+    min-height: 200px  
+    box-shadow: 4px 10px 15px -4px #e3e3e3
+    flex-basis: 200px
+    .timer
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      .timer__discription
+        line-height: 1.4em
+    &.timer-wrapper
+      flex-grow: 2
+    &.card
+      align-self: baseline
+
+.item.event-card-wrapper
+  align-items: flex-start
+  .event-card__header
+    background: green
+  .event-card
+    &:hover
+      .event-card__header
+        background-size: 110%
+        &:after
+          opacity: .3
+    .event-card__header
+      padding: 20px 
+      min-height: 200px
+      color: #fff
+      background: url(../../img/kayak.jpg) no-repeat center center
+      background-size: 100%
+      position: relative 
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+      align-items: flex-start
+      transition: .4s ease
+      .event-card__title
+        font-size: 1.1em
+      .filter
+        position: relative
+        z-index: 2
+      &:after
+        transition: .4s ease
+        content: ''
+        position: absolute
+        background: #000
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        width: 100%
+        height: 100%
+        opacity: .2
+        z-index: 1
+    .event-card-content
+      padding: 15px 35px 30px 25px
+      .event-card__date
+        margin-bottom: 10px
+        color: $darkTextColor
+      .event-card__discription-title
+        color: #000
+        font-size: 1.2em
+      .event-card__discription
+        margin: 15px 0 20px 
+        color: #000
+        line-height: 1.4em
+      .event-card__more
+        display: flex
+        flex-direction: row
+        a
+          color: blue
+        .arrow-right
+          svg
+            width: 12px
+            height: 12px
+            display: inline-block
+            vertical-align: middle
+            transition: .3s ease
+            g
+              fill: blue
+        &:hover
+          svg
+            margin-left: 5px
+  
+.circle-button
+  position: absolute
+  top: 0
+  cursor: pointer
+  right: -25px
+  height: 25px
+  width: 25px
+  text-align: center
+  overflow: hidden
+  background: red
+  border: none
+  display: flex
+  justify-content: center
+  align-items: center
+  transition: color .3s ease
+  &:hover
+    color: lighten(#000, 20%)
+
+
+
+          
+
+
+
+.item.card
+  .card-wrapper
+    position: relative
+    padding-left: 65px
+    &:after
+      content: ''
+      position: absolute
+      width: 50px
+      height: 50px
+      left: 0
+      top: 0
+      background: url(../../img/electronic.png)
+      background-size: cover 
+    .card-wrapper__product-left
+      color: red
+      
+@import 'mobile'

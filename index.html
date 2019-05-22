@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="build/css/normalize.css">
+    <link rel="stylesheet" href="build/css/all.css">
+</head>
+<body>
+    
+    <div class="radio-wrapper">
+
+        <input checked type="radio" name="changeTheme" value="Day" id="forDay"> 
+        <label for="forDay">День</label>
+        
+        <input type="radio" name="changeTheme" value="Night" id="forNight"> 
+        <label for="forNight">Ночь</label>
+
+    </div>
+
+
+     
+    
+    <div class="wrapper">
+        <div class="item event-card-wrapper">
+            <div class="event-card">
+                <div class="event-card__header">
+                    <div class="filter">
+                        <div class="event-card__title">НОВОСТИ</div>
+                    </div>
+                </div>
+                <div class="event-card-content">
+                    <div class="event-card__date">
+                        22 Мая 2019
+                    </div>
+                    <div class="event-card__discription-title">
+                        Приключения на Кайках
+                    </div>
+                    <div class="event-card__discription">
+                        Выбрав путешествие на каяке по этим уникальным уголкам Канады, вы сможете насладиться настоящим приключением в духе Дикого Запада.
+                    </div>
+                    <div class="event-card__more">
+                        <div class="arrow-right">
+                                    <?xml version='1.0' encoding='utf-8'?>
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 129 129">
+                                      <g>
+                                        <path d="m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z"/>
+                                      </g>
+                                    </svg>
+                        </div>
+                        <a href="#">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="item timer-wrapper">
+            <div class="timer">
+                <div class="timer__discription"> 
+                    Нажмите на кнопку! <br> 
+                    Секунд осталось: <span class="spanTimer"> 15  </span>   
+                </div>
+                <button class="btn default-button">Нажать</button>
+            </div>
+        </div>
+
+
+        <div class="item card">
+            <div class="card-wrapper">
+                <div class="card-wrapper__discription"> 
+                    Осталось упаковок по акции 
+                </div>
+                <div class="card-wrapper__product-left"> 5 шт. </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="popup popup-failed">
+        <div class="popup__wrapper">
+            <p> К сожалению, время вышло, вы не успели. </p>
+            <p> Начать заново? </p>
+            <button class="timer__reload default-button">Обновить</button>
+            <button class="popup__close default-button">Закрыть</button>
+            <button class="popup__close circle-button">&#10006;</button>
+        </div>
+    </div>
+
+
+    <div class="popup popup-success">
+        <div class="popup__wrapper">
+            <p>Отличный результат!</p>
+            <p>Вы нажали на кнопку за <span class="calculateSeconds"></span> </p>
+            <button class="popup__close circle-button">&#10006;</button>
+            <button class="popup__close default-button">Закрыть</button>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="build/js/main.js"></script>
+</body>
+</html>
